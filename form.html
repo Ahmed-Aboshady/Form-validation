@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="../Project/css/formstyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Registeration Form</h2>
+        <form>
+            <div class="row">
+                <div class="labels">
+                    <label for="username" id="name-label">User Name:</label>
+                </div>
+                <div class="rightDiv">
+                    <input type="text" id="userName" placeholder="Enter your Name" name="username" class="input-field"><span id="nameValidator">Name shouldn't contain numbers or null and contains 8 characters at least</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="labels">
+                    <label for="email" id="email-label">E-mail:</label>
+                </div>
+                <div class="rightDiv">
+                    <input type="text" id="email" placeholder="Enter your E-mail" name="email" class="input-field"><span id="emailValidator">Email can't be null and should be like(ahmedk@gmail.com)</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="labels">
+                    <label for="password" id="password-label">Password:</label>
+                </div>
+                <div class="rightDiv">
+                    <input type="password" id="password" placeholder="Enter your Password" name="password" class="input-field"><span id="passwordValidator">Password can't be null and should be at least 8 characters</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="labels">
+                    <label for="age" id="age-label">Age:</label>
+                </div>
+                <div class="rightDiv">
+                    <input type="text" id="age" placeholder="Enter your Age" name="age" class="input-field"><span id="AgeValidator">Age shouldn't contain characters or null and between 18 - 60</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="labels">
+                    <label for="country" id="country-label">Country:</label>
+                </div>
+                <div class="rightDiv">
+                    <select id="dropDown" name="country" class="dropDown">
+                        <option disabled selected>Select your Country</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="France">France</option>
+                        <option value="Spain">Spain</option>
+                        <option value="England">England</option>
+                    </select>
+                    <span id="countryValidator">You should select a country</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="labels">
+                    <label for="gender" id="gender-label">Gender:</label>
+                </div>
+                <div class="rightDiv">
+                    <ul>
+                        <li><label>Male<input type="radio" id="male" name="gender" value="male"></label></li>
+                        <li><label>Female<input type="radio" id="female" name="gender" value="female"></label></li><span id="genderValidator">Gender must be checked</span>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="labels">
+                    <label for="interests" id="interests-label">Interests:</label>
+                </div>
+                <div class="rightDiv">
+                    <ul>
+                        <li><label>Swimming<input type="checkbox" id="swimming" name="interests" value="swimming"></label></li>
+                        <li><label>Football<input type="checkbox" id="football" name="interests" value="football"></label></li>
+                        <li><label>Reading<input type="checkbox" id="reading" name="interests" value="reading"></label></li>
+                        <li><label>Travelling<input type="checkbox" id="travelling" name="interests" value="travelling"></label></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- buttons div -->
+            <div class="buttons">
+                <button type="button" id="addBtn" class="button">Add</button>
+                <button type="button" id="clearBtn" class="button">Clear</button>
+                <button type="button" id="printBtn" class="button">Print</button>
+            </div>
+
+        </form>
+        <!-- table section that contains all data from form -->
+        <div id="table">
+
+        </div>
+        <!-- table that contains only objects{name -- email -- age} -->
+        <div class="printTableContainer">
+            <div id="printTable">
+
+            </div>
+        </div>
+    </div>
+    <script src="../Project/js/form.js"></script>
+</body>
+
+</html>
